@@ -37,3 +37,7 @@ def posts_grouped_by_category(sort: :desc)
   posts_sorted_by_date(direction: sort)
     .group_by { |item| item[:category] }
 end
+
+# def flickr_photosets
+#   @items.find_all("/photos/sets/*")
+# end
