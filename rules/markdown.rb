@@ -1,6 +1,6 @@
 # Markdown
 compile "/**/*.md" do
-  filter :erb
+  filter :erb, trim_mode: "<>"
   filter :kramdown
   filter :colorize_syntax, default_colorizer: :rouge
 

@@ -7,7 +7,7 @@
 # - Everything else can go here
 #
 
-layout "/**/*", :erb
+layout "/**/*", :erb, trim_mode: "<>"
 
 # Rules for Specific Items
 include_rules "rules/home"

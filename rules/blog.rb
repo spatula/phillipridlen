@@ -4,7 +4,7 @@ preprocess do
 end
 
 compile "/posts/**/*.md" do
-  filter :erb
+  filter :erb, trim_mode: "<>"
   filter :kramdown
   filter :colorize_syntax, default_colorizer: :rouge
 
@@ -20,7 +20,7 @@ end
 
 if @config[:drafts]
   compile "/drafts/**/*" do
-    filter :erb
+    filter :erb, trim_mode: "<>"
     filter :kramdown
     filter :colorize_syntax, default_colorizer: :rouge
 
@@ -34,6 +34,6 @@ else
 end
 
 compile "/atom.xml" do
-  filter :erb
+  filter :erb, trim_mode: "<>"
   write item.identifier
 end
