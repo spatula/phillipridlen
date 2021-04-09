@@ -15,6 +15,10 @@
 <link href="/css/<%= style %>.css" rel="stylesheet" type="text/css">
 <% end %>
 
+<% @item.fetch(:prefetch, []).each do |prefetch| %>
+<link rel="prefetch" href="<%= relative_path_to prefetch %>">
+<% end %>
+
 <link rel="apple-touch-icon-precomposed" href="/images/favicon/favicon-180.png">
 <link rel="icon" href="/images/favicon/favicon-180.png">
 <meta name="msapplication-TileColor" content="#264E59">
